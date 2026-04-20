@@ -1,0 +1,18 @@
+.Rhistory
+.RData
+.Rproj.user/
+.Rproj
+.Ruserdata
+.RDS
+.DS_Store
+.vscode/
+__pycache__/
+*.pyc
+*.log
+
+# Large or regenerable raw data
+data/raw/*.csv
+
+# Optional: ignore temporary outputs
+outputs/figures/*.png
+outputs/tables/*.csv
