@@ -1,0 +1,306 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-04-20">
+    <creator>NetworkX 3.3</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="edge">
+      <attribute id="0" title="receptions" type="long" />
+      <attribute id="1" title="receiving_yards" type="long" />
+      <attribute id="2" title="touchdowns" type="long" />
+      <attribute id="3" title="first_downs" type="long" />
+      <attribute id="4" title="games_together" type="long" />
+    </attributes>
+    <nodes>
+      <node id="J.Brissett" label="J.Brissett" />
+      <node id="M.Floyd" label="M.Floyd" />
+      <node id="R.Gronkowski" label="R.Gronkowski" />
+      <node id="J.Develin" label="J.Develin" />
+      <node id="B.Bolden" label="B.Bolden" />
+      <node id="D.Lewis" label="D.Lewis" />
+      <node id="C.Hogan" label="C.Hogan" />
+      <node id="M.Mitchell" label="M.Mitchell" />
+      <node id="D.Amendola" label="D.Amendola" />
+      <node id="D.Foster" label="D.Foster" />
+      <node id="M.Lengel" label="M.Lengel" />
+      <node id="J.Edelman" label="J.Edelman" />
+      <node id="J.White" label="J.White" />
+      <node id="M.Bennett" label="M.Bennett" />
+      <node id="L.Blount" label="L.Blount" />
+      <node id="J.Garoppolo" label="J.Garoppolo" />
+      <node id="T.Brady" label="T.Brady" />
+    </nodes>
+    <edges>
+      <edge source="J.Brissett" target="B.Bolden" id="0" weight="2">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="15" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="1" />
+          <attvalue for="4" value="1" />
+        </attvalues>
+      </edge>
+      <edge source="J.Brissett" target="C.Hogan" id="1" weight="2">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="15" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="1" />
+          <attvalue for="4" value="2" />
+        </attvalues>
+      </edge>
+      <edge source="J.Brissett" target="D.Amendola" id="2" weight="2">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="23" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="2" />
+          <attvalue for="4" value="1" />
+        </attvalues>
+      </edge>
+      <edge source="J.Brissett" target="J.Edelman" id="3" weight="6">
+        <attvalues>
+          <attvalue for="0" value="6" />
+          <attvalue for="1" value="61" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="3" />
+          <attvalue for="4" value="3" />
+        </attvalues>
+      </edge>
+      <edge source="J.Brissett" target="J.White" id="4" weight="7">
+        <attvalues>
+          <attvalue for="0" value="7" />
+          <attvalue for="1" value="57" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="3" />
+          <attvalue for="4" value="3" />
+        </attvalues>
+      </edge>
+      <edge source="J.Brissett" target="L.Blount" id="5" weight="3">
+        <attvalues>
+          <attvalue for="0" value="3" />
+          <attvalue for="1" value="4" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="0" />
+          <attvalue for="4" value="1" />
+        </attvalues>
+      </edge>
+      <edge source="J.Brissett" target="M.Bennett" id="6" weight="10">
+        <attvalues>
+          <attvalue for="0" value="10" />
+          <attvalue for="1" value="187" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="6" />
+          <attvalue for="4" value="3" />
+        </attvalues>
+      </edge>
+      <edge source="J.Brissett" target="M.Mitchell" id="7" weight="1">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="27" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="1" />
+          <attvalue for="4" value="1" />
+        </attvalues>
+      </edge>
+      <edge source="J.Brissett" target="R.Gronkowski" id="8" weight="1">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="11" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="1" />
+          <attvalue for="4" value="1" />
+        </attvalues>
+      </edge>
+      <edge source="J.Garoppolo" target="C.Hogan" id="9" weight="6">
+        <attvalues>
+          <attvalue for="0" value="6" />
+          <attvalue for="1" value="107" />
+          <attvalue for="2" value="1" />
+          <attvalue for="3" value="4" />
+          <attvalue for="4" value="2" />
+        </attvalues>
+      </edge>
+      <edge source="J.Garoppolo" target="D.Amendola" id="10" weight="7">
+        <attvalues>
+          <attvalue for="0" value="7" />
+          <attvalue for="1" value="96" />
+          <attvalue for="2" value="2" />
+          <attvalue for="3" value="4" />
+          <attvalue for="4" value="2" />
+        </attvalues>
+      </edge>
+      <edge source="J.Garoppolo" target="D.Foster" id="11" weight="1">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="2" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="0" />
+          <attvalue for="4" value="1" />
+        </attvalues>
+      </edge>
+      <edge source="J.Garoppolo" target="J.Edelman" id="12" weight="13">
+        <attvalues>
+          <attvalue for="0" value="13" />
+          <attvalue for="1" value="135" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="6" />
+          <attvalue for="4" value="2" />
+        </attvalues>
+      </edge>
+      <edge source="J.Garoppolo" target="J.Garoppolo" id="13" weight="1">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="3" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="0" />
+          <attvalue for="4" value="1" />
+        </attvalues>
+      </edge>
+      <edge source="J.Garoppolo" target="J.White" id="14" weight="6">
+        <attvalues>
+          <attvalue for="0" value="6" />
+          <attvalue for="1" value="45" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="3" />
+          <attvalue for="4" value="2" />
+        </attvalues>
+      </edge>
+      <edge source="J.Garoppolo" target="M.Bennett" id="15" weight="5">
+        <attvalues>
+          <attvalue for="0" value="5" />
+          <attvalue for="1" value="60" />
+          <attvalue for="2" value="1" />
+          <attvalue for="3" value="3" />
+          <attvalue for="4" value="2" />
+        </attvalues>
+      </edge>
+      <edge source="J.Garoppolo" target="M.Floyd" id="16" weight="1">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="6" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="0" />
+          <attvalue for="4" value="1" />
+        </attvalues>
+      </edge>
+      <edge source="J.Garoppolo" target="M.Mitchell" id="17" weight="3">
+        <attvalues>
+          <attvalue for="0" value="3" />
+          <attvalue for="1" value="48" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="2" />
+          <attvalue for="4" value="2" />
+        </attvalues>
+      </edge>
+      <edge source="T.Brady" target="C.Hogan" id="18" weight="30">
+        <attvalues>
+          <attvalue for="0" value="30" />
+          <attvalue for="1" value="558" />
+          <attvalue for="2" value="3" />
+          <attvalue for="3" value="18" />
+          <attvalue for="4" value="10" />
+        </attvalues>
+      </edge>
+      <edge source="T.Brady" target="D.Amendola" id="19" weight="14">
+        <attvalues>
+          <attvalue for="0" value="14" />
+          <attvalue for="1" value="124" />
+          <attvalue for="2" value="2" />
+          <attvalue for="3" value="8" />
+          <attvalue for="4" value="7" />
+        </attvalues>
+      </edge>
+      <edge source="T.Brady" target="D.Lewis" id="20" weight="17">
+        <attvalues>
+          <attvalue for="0" value="17" />
+          <attvalue for="1" value="94" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="4" />
+          <attvalue for="4" value="7" />
+        </attvalues>
+      </edge>
+      <edge source="T.Brady" target="J.Develin" id="21" weight="3">
+        <attvalues>
+          <attvalue for="0" value="3" />
+          <attvalue for="1" value="18" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="2" />
+          <attvalue for="4" value="3" />
+        </attvalues>
+      </edge>
+      <edge source="T.Brady" target="J.Edelman" id="22" weight="79">
+        <attvalues>
+          <attvalue for="0" value="79" />
+          <attvalue for="1" value="910" />
+          <attvalue for="2" value="3" />
+          <attvalue for="3" value="47" />
+          <attvalue for="4" value="12" />
+        </attvalues>
+      </edge>
+      <edge source="T.Brady" target="J.White" id="23" weight="47">
+        <attvalues>
+          <attvalue for="0" value="47" />
+          <attvalue for="1" value="449" />
+          <attvalue for="2" value="5" />
+          <attvalue for="3" value="20" />
+          <attvalue for="4" value="12" />
+        </attvalues>
+      </edge>
+      <edge source="T.Brady" target="L.Blount" id="24" weight="4">
+        <attvalues>
+          <attvalue for="0" value="4" />
+          <attvalue for="1" value="34" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="1" />
+          <attvalue for="4" value="3" />
+        </attvalues>
+      </edge>
+      <edge source="T.Brady" target="M.Bennett" id="25" weight="40">
+        <attvalues>
+          <attvalue for="0" value="40" />
+          <attvalue for="1" value="454" />
+          <attvalue for="2" value="6" />
+          <attvalue for="3" value="22" />
+          <attvalue for="4" value="12" />
+        </attvalues>
+      </edge>
+      <edge source="T.Brady" target="M.Floyd" id="26" weight="3">
+        <attvalues>
+          <attvalue for="0" value="3" />
+          <attvalue for="1" value="36" />
+          <attvalue for="2" value="1" />
+          <attvalue for="3" value="3" />
+          <attvalue for="4" value="1" />
+        </attvalues>
+      </edge>
+      <edge source="T.Brady" target="M.Lengel" id="27" weight="2">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="22" />
+          <attvalue for="2" value="1" />
+          <attvalue for="3" value="1" />
+          <attvalue for="4" value="2" />
+        </attvalues>
+      </edge>
+      <edge source="T.Brady" target="M.Mitchell" id="28" weight="28">
+        <attvalues>
+          <attvalue for="0" value="28" />
+          <attvalue for="1" value="326" />
+          <attvalue for="2" value="4" />
+          <attvalue for="3" value="20" />
+          <attvalue for="4" value="8" />
+        </attvalues>
+      </edge>
+      <edge source="T.Brady" target="R.Gronkowski" id="29" weight="24">
+        <attvalues>
+          <attvalue for="0" value="24" />
+          <attvalue for="1" value="529" />
+          <attvalue for="2" value="3" />
+          <attvalue for="3" value="18" />
+          <attvalue for="4" value="5" />
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

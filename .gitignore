@@ -16,3 +16,5 @@ data/raw/*.csv
 # Optional: ignore temporary outputs
 outputs/figures/*.png
 outputs/tables/*.csv
+references/pbp_2007_raw.csv
+data/raw/*.csv

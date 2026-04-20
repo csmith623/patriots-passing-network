@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-04-20">
+    <creator>NetworkX 3.3</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="edge">
+      <attribute id="0" title="receptions" type="long" />
+      <attribute id="1" title="receiving_yards" type="long" />
+      <attribute id="2" title="touchdowns" type="long" />
+      <attribute id="3" title="first_downs" type="long" />
+      <attribute id="4" title="games_together" type="long" />
+    </attributes>
+    <nodes>
+      <node id="K.Faulk" label="K.Faulk" />
+      <node id="M.Cassel" label="M.Cassel" />
+      <node id="R.Moss" label="R.Moss" />
+      <node id="B.Green-Ellis" label="B.Green-Ellis" />
+      <node id="K.Washington" label="K.Washington" />
+      <node id="H.Evans" label="H.Evans" />
+      <node id="S.Morris" label="S.Morris" />
+      <node id="K.O'Connell" label="K.O'Connell" />
+      <node id="B.Watson" label="B.Watson" />
+      <node id="J.Gaffney" label="J.Gaffney" />
+      <node id="S.Aiken" label="S.Aiken" />
+      <node id="W.Welker" label="W.Welker" />
+      <node id="D.Thomas" label="D.Thomas" />
+      <node id="T.Brady" label="T.Brady" />
+    </nodes>
+    <edges>
+      <edge source="K.Faulk" target="W.Welker" id="0" weight="1">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="-2" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="0" />
+          <attvalue for="4" value="1" />
+        </attvalues>
+      </edge>
+      <edge source="M.Cassel" target="B.Green-Ellis" id="1" weight="3">
+        <attvalues>
+          <attvalue for="0" value="3" />
+          <attvalue for="1" value="37" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="3" />
+          <attvalue for="4" value="3" />
+        </attvalues>
+      </edge>
+      <edge source="M.Cassel" target="B.Watson" id="2" weight="22">
+        <attvalues>
+          <attvalue for="0" value="22" />
+          <attvalue for="1" value="209" />
+          <attvalue for="2" value="2" />
+          <attvalue for="3" value="12" />
+          <attvalue for="4" value="10" />
+        </attvalues>
+      </edge>
+      <edge source="M.Cassel" target="D.Thomas" id="3" weight="7">
+        <attvalues>
+          <attvalue for="0" value="7" />
+          <attvalue for="1" value="83" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="5" />
+          <attvalue for="4" value="5" />
+        </attvalues>
+      </edge>
+      <edge source="M.Cassel" target="H.Evans" id="4" weight="3">
+        <attvalues>
+          <attvalue for="0" value="3" />
+          <attvalue for="1" value="59" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="3" />
+          <attvalue for="4" value="2" />
+        </attvalues>
+      </edge>
+      <edge source="M.Cassel" target="J.Gaffney" id="5" weight="36">
+        <attvalues>
+          <attvalue for="0" value="36" />
+          <attvalue for="1" value="447" />
+          <attvalue for="2" value="2" />
+          <attvalue for="3" value="25" />
+          <attvalue for="4" value="11" />
+        </attvalues>
+      </edge>
+      <edge source="M.Cassel" target="K.Faulk" id="6" weight="58">
+        <attvalues>
+          <attvalue for="0" value="58" />
+          <attvalue for="1" value="486" />
+          <attvalue for="2" value="3" />
+          <attvalue for="3" value="23" />
+          <attvalue for="4" value="15" />
+        </attvalues>
+      </edge>
+      <edge source="M.Cassel" target="K.Washington" id="7" weight="1">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="3" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="1" />
+          <attvalue for="4" value="1" />
+        </attvalues>
+      </edge>
+      <edge source="M.Cassel" target="R.Moss" id="8" weight="66">
+        <attvalues>
+          <attvalue for="0" value="66" />
+          <attvalue for="1" value="958" />
+          <attvalue for="2" value="11" />
+          <attvalue for="3" value="45" />
+          <attvalue for="4" value="16" />
+        </attvalues>
+      </edge>
+      <edge source="M.Cassel" target="S.Aiken" id="9" weight="7">
+        <attvalues>
+          <attvalue for="0" value="7" />
+          <attvalue for="1" value="103" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="5" />
+          <attvalue for="4" value="6" />
+        </attvalues>
+      </edge>
+      <edge source="M.Cassel" target="S.Morris" id="10" weight="17">
+        <attvalues>
+          <attvalue for="0" value="17" />
+          <attvalue for="1" value="161" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="5" />
+          <attvalue for="4" value="7" />
+        </attvalues>
+      </edge>
+      <edge source="M.Cassel" target="W.Welker" id="11" weight="108">
+        <attvalues>
+          <attvalue for="0" value="108" />
+          <attvalue for="1" value="1147" />
+          <attvalue for="2" value="3" />
+          <attvalue for="3" value="55" />
+          <attvalue for="4" value="16" />
+        </attvalues>
+      </edge>
+      <edge source="K.O'Connell" target="D.Thomas" id="12" weight="1">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="4" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="0" />
+          <attvalue for="4" value="1" />
+        </attvalues>
+      </edge>
+      <edge source="K.O'Connell" target="J.Gaffney" id="13" weight="2">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="21" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="1" />
+          <attvalue for="4" value="1" />
+        </attvalues>
+      </edge>
+      <edge source="K.O'Connell" target="S.Aiken" id="14" weight="1">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="-2" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="0" />
+          <attvalue for="4" value="1" />
+        </attvalues>
+      </edge>
+      <edge source="T.Brady" target="D.Thomas" id="15" weight="1">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="6" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="0" />
+          <attvalue for="4" value="1" />
+        </attvalues>
+      </edge>
+      <edge source="T.Brady" target="R.Moss" id="16" weight="3">
+        <attvalues>
+          <attvalue for="0" value="3" />
+          <attvalue for="1" value="50" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="1" />
+          <attvalue for="4" value="1" />
+        </attvalues>
+      </edge>
+      <edge source="T.Brady" target="W.Welker" id="17" weight="3">
+        <attvalues>
+          <attvalue for="0" value="3" />
+          <attvalue for="1" value="20" />
+          <attvalue for="2" value="0" />
+          <attvalue for="3" value="2" />
+          <attvalue for="4" value="1" />
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
