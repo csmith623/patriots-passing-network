@@ -142,10 +142,10 @@ for season, s in df.groupby("season"):
         )
         
         # 2. Attach data directly to the NetworkX node for Gephi
-        G.nodes[node]['label'] = node
-        G.nodes[node]['community_id'] = community_map.get(node, -1)
-        G.nodes[node]['pagerank'] = pagerank_c.get(node, 0.0)
-        G.nodes[node]['in_strength'] = in_strength.get(node, 0.0)
+        G.nodes[node]['label'] = str(node)
+        G.nodes[node]['community_id'] = int(community_map.get(node, -1))
+        G.nodes[node]['pagerank'] = float(pagerank_c.get(node, 0.0))
+        G.nodes[node]['in_strength'] = float(in_strength.get(node, 0.0))
 
     # Export the enriched Graph to GEXF
     out_file = OUT_GEXF / f"patriots_passing_{int(season)}.gexf"
