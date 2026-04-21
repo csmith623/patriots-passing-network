@@ -27,35 +27,47 @@ cols_needed = [
     "first_down",
     "passer_player_name",
     "receiver_player_name",
-    "receiver_player_id",
 ]
 
 df = pd.read_csv(RAW_FILE, low_memory=False)
 
-keep = [c for c in cols_needed if c in df.columns]
-df = df[keep].copy()
+missing_cols = [c for c in cols_needed if c not in df.columns]
+if missing_cols:
+    raise ValueError(f"Missing required raw-data columns: {missing_cols}")
+
+df = df[cols_needed].copy()
 
 df = df[
     (df["season"].isin(SEASONS)) &
     (df["season_type"] == "REG") &
     (df["posteam"] == TEAM) &
+    (df["pass"] == 1) &
     (df["complete_pass"] == 1) &
     (df["passer_player_name"].notna()) &
     (df["receiver_player_name"].notna())
 ].copy()
+
+df["game_date"] = pd.to_datetime(df["game_date"]).dt.date
 
 df["opponent"] = df.apply(
     lambda r: r["away_team"] if r["home_team"] == TEAM else r["home_team"],
     axis=1
 )
 
-df["home_away"] = df["posteam_type"].map({"home": "home", "away": "away"}).fillna("unknown")
+df["home_away"] = (
+    df["posteam_type"]
+    .map({"home": "home", "away": "away"})
+    .fillna("unknown")
+)
 
 group_cols = [
     "season",
     "week",
     "game_id",
     "game_date",
+    "posteam",
+    "home_team",
+    "away_team",
     "opponent",
     "home_away",
     "passer_player_name",
@@ -64,23 +76,20 @@ group_cols = [
 
 master = (
     df.groupby(group_cols, dropna=False)
-      .agg(
-          receptions=("complete_pass", "sum"),
-          receiving_yards=("yards_gained", "sum"),
-          pass_touchdowns=("pass_touchdown", "sum"),
-          first_downs=("first_down", "sum"),
-          total_air_yards=("air_yards", "sum"),
-          total_yac=("yards_after_catch", "sum"),
-      )
-      .reset_index()
+    .agg(
+        receptions=("complete_pass", "sum"),
+        rec_yards=("yards_gained", "sum"),
+        rec_tds=("pass_touchdown", "sum"),
+        first_downs=("first_down", "sum"),
+        total_air_yards=("air_yards", "sum"),
+        total_yac=("yards_after_catch", "sum"),
+    )
+    .reset_index()
 )
 
-master = master.rename(columns={
-    "passer_player_name": "passer",
-    "receiver_player_name": "receiver"
-})
-
-master = master.sort_values(["season", "week", "game_id", "passer", "receiver"]).reset_index(drop=True)
+master = master.sort_values(
+    ["season", "week", "game_id", "passer_player_name", "receiver_player_name"]
+).reset_index(drop=True)
 
 OUT_FILE.parent.mkdir(parents=True, exist_ok=True)
 master.to_csv(OUT_FILE, index=False)
