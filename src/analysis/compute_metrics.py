@@ -5,10 +5,12 @@ from networkx.algorithms import community
 
 ROOT = Path(__file__).resolve().parents[2]
 IN_FILE = ROOT / "data" / "processed" / "patriots_master_table.csv"
-OUT_DIR = ROOT / "outputs" / "tables"
+OUT_TABLES = ROOT / "outputs" / "tables"
+OUT_GEXF = ROOT / "outputs" / "gexf"
 
 df = pd.read_csv(IN_FILE)
-OUT_DIR.mkdir(parents=True, exist_ok=True)
+OUT_TABLES.mkdir(parents=True, exist_ok=True)
+OUT_GEXF.mkdir(parents=True, exist_ok=True)
 
 required = {
     "season",
@@ -80,11 +82,9 @@ for season, s in df.groupby("season"):
 
     # --- COMMUNITY DETECTION (Louvain Method) ---
     if n > 0:
-        # Louvain is best run on the undirected version of the graph
         communities = community.louvain_communities(G_undirected, weight='weight', seed=42)
         modularity_score = community.modularity(G_undirected, communities, weight='weight')
         
-        # Map each node to its new community ID
         community_map = {}
         for comm_id, comm_nodes in enumerate(communities):
             for node in comm_nodes:
@@ -92,7 +92,6 @@ for season, s in df.groupby("season"):
     else:
         modularity_score = 0.0
         community_map = {}
-    # --------------------------------------------
 
     in_degree = dict(G.in_degree())
     out_degree = dict(G.out_degree())
@@ -119,17 +118,19 @@ for season, s in df.groupby("season"):
             "diameter": diameter,                   
             "avg_path_length": avg_path_length,     
             "avg_clustering": avg_clustering,
-            "modularity": modularity_score, # Track how distinctly the network divides
+            "modularity": modularity_score, 
             "assortativity": assortativity,
         }
     )
 
+    # --- ADD ATTRIBUTES TO GRAPH AND BUILD CSV ROWS ---
     for node in G.nodes():
+        # 1. Save data for the CSV table
         player_rows.append(
             {
                 "season": int(season),
                 "player": node,
-                "community_id": community_map.get(node, -1), # Assign the community
+                "community_id": community_map.get(node, -1),
                 "in_degree": in_degree.get(node, 0),
                 "out_degree": out_degree.get(node, 0),
                 "in_strength": in_strength.get(node, 0),
@@ -139,14 +140,26 @@ for season, s in df.groupby("season"):
                 "pagerank": pagerank_c.get(node, 0),
             }
         )
+        
+        # 2. Attach data directly to the NetworkX node for Gephi
+        G.nodes[node]['label'] = node
+        G.nodes[node]['community_id'] = community_map.get(node, -1)
+        G.nodes[node]['pagerank'] = pagerank_c.get(node, 0.0)
+        G.nodes[node]['in_strength'] = in_strength.get(node, 0.0)
 
+    # Export the enriched Graph to GEXF
+    out_file = OUT_GEXF / f"patriots_passing_{int(season)}.gexf"
+    nx.write_gexf(G, out_file)
+    print(f"Exported enriched network to {out_file}")
+
+# --- SAVE DATA TABLES ---
 season_df = pd.DataFrame(season_summary).sort_values("season")
 players_df = pd.DataFrame(player_rows).sort_values(
     ["season", "pagerank"], ascending=[True, False]
 )
 
-season_df.to_csv(OUT_DIR / "season_summary_metrics.csv", index=False)
-players_df.to_csv(OUT_DIR / "player_centrality_metrics.csv", index=False)
+season_df.to_csv(OUT_TABLES / "season_summary_metrics.csv", index=False)
+players_df.to_csv(OUT_TABLES / "player_centrality_metrics.csv", index=False)
 
 top_players = (
     players_df.sort_values(["season", "pagerank"], ascending=[True, False])
@@ -154,11 +167,6 @@ top_players = (
     .head(10)
 )
 
-top_players.to_csv(OUT_DIR / "top10_players_by_season.csv", index=False)
+top_players.to_csv(OUT_TABLES / "top10_players_by_season.csv", index=False)
 
-print("Saved:")
-print(OUT_DIR / "season_summary_metrics.csv")
-print(OUT_DIR / "player_centrality_metrics.csv")
-print(OUT_DIR / "top10_players_by_season.csv")
-print()
-print(season_df.to_string(index=False))
+print("\nSaved all metrics and graphs successfully.")
