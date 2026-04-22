@@ -14,11 +14,3 @@ Build directed weighted player passing networks from nflverse play-by-play data 
 3. Build season and evolving networks
 4. Export GEXF files for Gephi
 5. Compute network statistics and visualizations
-
-## Repo structure
-- `data/raw/` raw source pulls
-- `data/interim/` filtered play-level data
-- `data/processed/` cleaned master tables
-- `scripts/` data and analysis scripts
-- `outputs/` figures, tables, and GEXF files
-- `docs/` notes and checkpoint/report materials
