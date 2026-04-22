@@ -184,4 +184,23 @@ plt.tight_layout()
 plt.savefig(FIG_DIR / "robustness_targeted_vs_random_all_seasons.png", dpi=300, bbox_inches="tight")
 plt.close()
 
+player_df["total_degree"] = player_df["in_degree"] + player_df["out_degree"]
+
+plt.figure(figsize=(8, 5))
+plt.hist(
+    player_df["total_degree"], 
+    bins=range(0, int(player_df["total_degree"].max()) + 2), 
+    align='left', 
+    color="#e76f51", 
+    edgecolor="black", 
+    alpha=0.9
+)
+plt.title("Degree Distribution of Patriots Passing Networks (2006-2016)")
+plt.xlabel("Node Degree (Total Connections)")
+plt.ylabel("Frequency (Number of Players)")
+plt.grid(axis='y', alpha=0.4)
+plt.tight_layout()
+plt.savefig(FIG_DIR / "degree_distribution.png", dpi=300)
+plt.close()
+
 print(f"Saved figures to: {FIG_DIR}")
